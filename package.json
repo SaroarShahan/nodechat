@@ -4,7 +4,7 @@
   "description": "Nodechat is a real time chat messanger",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon server/server.js"
+    "start": "node server/server.js"
   },
   "author": "SaroarShahan",
   "license": "MIT",
