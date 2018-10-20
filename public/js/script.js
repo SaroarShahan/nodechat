@@ -1,22 +1,17 @@
-(function() {
-  "use strict";
+// (function() {
+//   "use strict";
 
-  const socket = io();
+const socket = io();
 
-  socket.on("connect", () => {
-    console.log("Connected to server");
+socket.on("connect", () => {
+  console.log("Connected to server");
+});
 
-    socket.emit("newMgsCreated", {
-      to: "Shahan",
-      text: "Hi"
-    });
-  });
+socket.on("newMessage", mgs => {
+  console.log(mgs);
+});
 
-  socket.on("NewMgs", mgs => {
-    console.log(mgs);
-  });
-
-  socket.on("disconnect", () => {
-    console.log("Disconnected from server");
-  });
-})();
+socket.on("disconnect", () => {
+  console.log("Disconnected from server");
+});
+// })();
